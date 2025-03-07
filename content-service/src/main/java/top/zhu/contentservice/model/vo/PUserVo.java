@@ -1,7 +1,10 @@
 package top.zhu.contentservice.model.vo;
 
+import lombok.Data;
+
+@Data
 public class PUserVo {
-    private int id;
+    private Integer id;
 
     private String username;
 

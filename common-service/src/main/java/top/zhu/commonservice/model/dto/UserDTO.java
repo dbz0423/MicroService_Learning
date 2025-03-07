@@ -1,13 +1,11 @@
-package top.zhu.userservice.model.vo;
+package top.zhu.commonservice.model.dto;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class UserVo {
+public class UserDTO {
 
     private Integer id;
 
