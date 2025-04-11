@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: admin-service
+  mail:
+    host: smtp.qq.com
+    username: 2569876934@qq.com
+    password: txslhugiasijebdc
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+  boot:
+    admin:
+      notify:
+        mail:
+          enabled: true
+          from: 2569876934@qq.com
+          to: 2569876934@qq.com
+          cc: 2569876934@qq.com
+        dingtalk:
+          enabled: true
+          webhook-url: https://oapi.dingtalk.com/robot/send?access_token=2cddc340911d427edcd355bbf9400e1d8735c9c06f9ea436acf92803e0fd19ea
+          secret: SEC8b322eca9bbdeceb6fc2e18d2265a744b5e9948bf6ec4bd219643fe911259b7f
+          message: "应用#{instance.registration.name} - #{instance.id}掉线了!!!"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0
+  observations:
+    key-values:
+      application: ${spring.application.name}
+
+logging:
+  pattern:
+    level: ${spring.application.name:},%X{traceId:-},%X{spanId:-}
+server:
+  port: 8082

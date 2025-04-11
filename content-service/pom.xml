@@ -21,6 +21,7 @@
         <mybatis-plus.version>3.5.6</mybatis-plus.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <sentinel.version>1.8.7</sentinel.version>
+        <fastjson2.version>2.0.48</fastjson2.version>
     </properties>
 
     <dependencyManagement>
@@ -122,6 +123,24 @@
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
             <version>${sentinel.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!--fastjson2-->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>${fastjson2.version}</version>
         </dependency>
     </dependencies>
 

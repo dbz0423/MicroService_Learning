@@ -17,6 +17,8 @@ public class UserVo {
 
     private String avatarUrl;
 
+    private Integer bonus;
+
     private LocalDateTime updateTime;
 
     private LocalDateTime createTime;

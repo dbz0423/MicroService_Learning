@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+# ????? Spring Boot Admin Server
+spring:
+  application:
+    name: client-service
+  boot:
+    admin:
+      client:
+        url: http://localhost:8082
+
+# ??????
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  # ?? env. ???????
+  info:
+    env:
+      enabled: true
+
+logging:
+  file:
+    name: ./logs/sba-client.log

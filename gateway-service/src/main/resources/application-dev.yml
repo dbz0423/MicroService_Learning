@@ -31,7 +31,7 @@ spring:
           # 断言（可以多个）
           predicates:
             - Path=/content/** # 路由匹配的路径
-            - Method=GET
+#            - Method=GET
           # 过滤器
           filters:
             - StripPrefix=1 # 转发路由时，去掉一层前缀/user-service

@@ -12,10 +12,21 @@ import top.zhu.userservice.service.UserService;
 @Service
 @AllArgsConstructor
 public class UserServiceImpl extends ServiceImpl<UserMapper , User> implements UserService {
+    private final UserMapper userMapper;
+
     @Override
     public UserVo userInfo(Integer id) {
         User user = baseMapper.selectById(id);
         UserVo userVo = UserConvert.INSTANCE.convert(user);
         return userVo;
+    }
+
+    @Override
+    public void addBonus(Integer id, Integer bonus) {
+        User user = baseMapper.selectById(id);
+        if (user != null) {
+            user.setBonus(user.getBonus() + bonus);
+            userMapper.updateById(user);
+        }
     }
 }

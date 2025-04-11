@@ -22,6 +22,11 @@ public class UserServiceFallBackFactory implements FallbackFactory<UserService> 
                 userVo.setEmail("dbz2333@163.com");
                 return Result.ok(userVo);
             }
+
+            @Override
+            public Result addBonus(Integer id, Integer bonus) {
+                return Result.ok("ok");
+            }
         };
     }
 }

@@ -1,5 +1,12 @@
 server:
   port: 8082
+rocketmq:
+  name-server: 43.137.12.232:9876
+  producer:
+    group: zhuhaoran-p-group
+  consumer:
+    group: zhuhaoran-c-group
+
 #
 #spring:
 #  application:

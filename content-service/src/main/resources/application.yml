@@ -27,6 +27,11 @@ spring:
             rule-type: degrade
             data-id: content-service-degrade-rules
             data-type: json
+  data:
+    redis:
+      host: 127.0.0.1
+      password:
+      port: 6379
 feign:
   sentinel:
     enabled: true

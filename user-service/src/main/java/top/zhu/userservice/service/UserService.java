@@ -7,4 +7,6 @@ import top.zhu.userservice.model.vo.UserVo;
 public interface UserService extends IService<User> {
 
     UserVo userInfo(Integer id);
+
+    void addBonus(Integer id , Integer bonus);
 }
